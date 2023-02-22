@@ -1,0 +1,1 @@
+# Dlubal-Test---Component---Slider-A
