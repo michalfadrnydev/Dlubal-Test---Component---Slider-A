@@ -1,46 +1,39 @@
 :root {
+    /*colors*/
     --c-backg: #192A80;
     --c-text: #ffffff;
     --c-box-backg: #2E4099;
     --c-c: #EB9C00;
     --c-text-fig: #666666;
-    
-    /*headers*/
+    /*headers: font-size & line-height*/
     --fs-h-s: 32px;
     --fs-h-m:36px;
     --fs-h-l: 42px;
     --lh-h-s: 38px;
     --lh-h-m: 43px;
     --lh-h-l: 48px;
-
     /*body*/
     --fs-b: 14px;
     --lh-b-s: 20px;
     --opacity: 0.7;
-
     /*font-weight*/
     --fw-bold: 730;
     --fw-regular: 400;
-
     /*font-family*/
     --ff-head: 'League Spartan', sans-serif;
     --ff-body: Arial, Helvetica, sans-serif;
-
-    /*body*/
+    /*general margin*/
     --marg: 32px;
 }
-
 body {
     background-color: var(--c-backg);
     color: var(--c-text);
     margin: 0;
     padding: 32px 16px;
 }
-
 #tablet-header {
     display: none;
 }
-
 .regular-header {
     font-family: var(--ff-head);
     font-size: var(--fs-h-s);
@@ -48,7 +41,6 @@ body {
     line-height: var(--lh-h-s);
     margin: 0;
 }
-
 p {
     line-height: var(--lh-b-s);
     font-family: var(--ff-body);
@@ -57,11 +49,9 @@ p {
     margin: var(--marg) 0 calc(var(--marg)/2) 0;
     opacity: var(--opacity);
 }
-
 p:nth-of-type(2) {
     margin: calc(var(--marg)/2) 0 var(--marg) 0;
 }
-
 button {
     background-color: var(--c-backg);
     border: 2px solid var(--c-text);
@@ -74,17 +64,14 @@ button {
     padding: 17px 24px;
     transition: all 0.2s linear 0s;
 }
-
 button:hover {
     background-color: var(--c-box-backg);
     transition: all 0.2s linear 0s;
 }
-
 .list-solutions {
     background-color: var(--c-box-backg);
     padding: var(--marg);
 }
-
 h3 {
     font-size: var(--fs-b);
     font-family: var(--ff-body);
@@ -94,12 +81,10 @@ h3 {
     margin: 0 0 calc(var(--marg)/2) 0;
     opacity: var(--opacity);
 }
-
 ul {
     padding-left: 20px;
     margin: 16px 0 0 0;
 }
-
 li {
     font-size: calc(var(--fs-b)+2);
     font-family: var(--ff-head);
@@ -111,28 +96,22 @@ li {
     position: relative;
     vertical-align: middle;
 }
-
 li:last-of-type {
     margin-bottom: 0;
 }
-
 li::marker {
     content: url("images/arrow-icon.svg"); 
 }
-
 .image-container {
     display: none;
 }
-
 .image-container img {
     box-sizing: border-box;
     width: 100%;
 }
-
 .image-container-image {
     position: relative;
 }
-
 .image-container span {
     bottom: 0;
     color: var(--c-text);
@@ -146,7 +125,6 @@ li::marker {
     right: 0;
     z-index: 1;
 }
-
 .image-container-text {
     background-color: var(--c-text);
     box-sizing: border-box;
@@ -154,7 +132,6 @@ li::marker {
     padding: var(--marg);
     width: 100%;
 }
-
 .image-container h2 {
     color: var(--c-backg);
     font-family: var(--ff-head);
@@ -164,7 +141,6 @@ li::marker {
     margin: 0 0 calc(var(--marg)/4);
     text-align: center;
 }
-
 .image-container p {
     color: var(--c-text-fig);
     font-family: var(--ff-body);
@@ -175,24 +151,15 @@ li::marker {
     text-align: center;
     width: 99%;
 }
-
 .image-container img, .image-container-text {
     vertical-align: top;
   }
-
-/*--------------------------RESPONSIVE----------------------------*/
-
-
-/*------------------------------MOBILE LANDSCPAE--------------------------------*/
+  
 @media (min-width: 576px) {
     body {
         padding: 40px 32px;
     }
-
 }
-
-/*------------------------------TABLET--------------------------------*/
-
 @media (min-width: 992px) {
     #tablet-header {
         display: block;
@@ -203,53 +170,39 @@ li::marker {
         margin: 0;
         margin-bottom: 32px;
     }
-
-
     .regular-header {
         display: none;
     }
-
     button {
         margin-bottom: 48px;
     }
-
     main{
         display: flex;
         gap: var(--marg);
     }
-
     p:nth-of-type(1) {
         margin-top: 0;
     }
-
     .image-container {
         display: block;
     }
-
     .content-container {
         flex-basis: 35%;
     }
-
     .pc-text {
         display: none;
     }
-
     .image-container {
         flex-basis: 62%;
     }
 }
-
-/*------------------------------COMP REGULAR--------------------------------*/
-
 @media (min-width: 1200px) {
     body {
         padding: 48px 32px;
     }
-
     #tablet-header {
         display: none;
     }
-
     .regular-header {
         display: block;
         font-size: var(--fs-h-l);
@@ -258,16 +211,13 @@ li::marker {
         margin: 0;
         margin-bottom: 32px;
     }
-
     button {
         display: none;
     }
-
     .content-container {
         min-width: 448px;
         max-width: 448px;
     }
-
     .image-container {
         flex-grow: 1;
     }
@@ -276,21 +226,12 @@ li::marker {
         height: 576px;
         object-fit: cover;
     }
-
     .pc-text {
         display: block;
     }
-
     #tablet-text {
         display: none;
     }
-
 }
-
-/*------------------------------COMP XXXXL--------------------------------*/
-
 @media (min-width: 1312px) {
-
 }
-
-
